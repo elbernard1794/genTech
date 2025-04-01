@@ -1,0 +1,31 @@
+import React from "react";
+
+const App = () => {
+  const name = "Bernard";
+  const x = 10;
+  const y = 11;
+  const sum = x + y;
+
+  const stdNames = ["Bernard", "John", "Adu", "Gifty"];
+
+  const loggedIn = true;
+
+  return (
+    <>
+      <div className="text-5xl">App</div>
+      <div>Hello World</div>
+      <p>Hello {name}</p>
+      <p>
+        The sum of {x} and {y} is {sum}
+      </p>
+      <ul>
+        {stdNames.map((names, index) => (
+          <li key={index}>{names}</li>
+        ))}
+      </ul>
+      {!loggedIn ? <h1>Hello Member</h1>: <h1>Hello Guest</h1>}
+    </>
+  );
+};
+
+export default App;
